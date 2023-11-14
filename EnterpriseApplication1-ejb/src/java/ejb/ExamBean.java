@@ -18,12 +18,12 @@ public class ExamBean {
     }
 
     public List<Exam> getAllExams() {
-        // код для получения всех экзаменов из базы данных
+        // получаем все экзамены из базы данных
         return entityManager.createQuery("SELECT e FROM Exam e", Exam.class).getResultList();
     }
 
     public void setExamDate(Long disciplineId, String examDate) {
-        // код для установки даты экзамена для определенной дисциплины
+        // установка даты экзамена для определенной дисциплины
         Discipline discipline = entityManager.find(Discipline.class, disciplineId);
         Exam exam = new Exam();
         exam.setDiscipline(discipline);
@@ -47,7 +47,7 @@ public class ExamBean {
     }
 
     public Exam getExamById(long examId) {
-        // Используйте метод find класса EntityManager для получения экзамена по его идентификатору
+        // получение экзамена по его идентификатору
         return entityManager.find(Exam.class, examId);
 
     }
@@ -72,16 +72,6 @@ public class ExamBean {
         entityManager.persist(grade);
     }
 
-//     public List<Exam> getExamsByGroupId(Long groupId) {
-//        try {
-//            Query query = entityManager.createNativeQuery("SELECT e FROM Exam e WHERE e.disciplineID IN (SELECT agd.DISCIPLINE_ID FROM ACADEMIC_GROUP_DISCIPLINE agd WHERE agd.GROUP_ID = :groupId)", Exam.class);
-//            query.setParameter("groupId", groupId);
-//            return query.getResultList();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            return null;
-//        }
-//    }
     public List<Exam> getExamsByGroupId(Long groupId) {
     Query query = entityManager.createNativeQuery(
         "SELECT e.* FROM EXAM e " +

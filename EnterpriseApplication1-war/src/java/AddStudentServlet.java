@@ -41,8 +41,8 @@ public class AddStudentServlet extends HttpServlet {
             response.sendRedirect("StudentManagement.jsp");
         } catch (Exception e) {
             // Handle the exception
-            e.printStackTrace(); // Зарегистрируйте ошибку
-            // Обрабатываем неверный ввод (например, перенаправление на страницу ошибки)
+            e.printStackTrace(); 
+            // Обрабатываем неверный ввод
             response.sendRedirect("error.jsp");
         }
     }

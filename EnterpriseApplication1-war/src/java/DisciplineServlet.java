@@ -1,3 +1,4 @@
+
 import ejb.Discipline;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,6 +12,7 @@ import java.util.List;
 
 @WebServlet("/DisciplineServlet")
 public class DisciplineServlet extends HttpServlet {
+
     @EJB
     private DisciplineBean disciplineBean;
 
@@ -25,7 +27,7 @@ public class DisciplineServlet extends HttpServlet {
                 request.getRequestDispatcher("viewDisciplines.jsp").forward(request, response);
             }
         } else {
-            // Handle other GET requests or provide a default view
+            //  other GET requests
         }
     }
 
@@ -56,7 +58,7 @@ public class DisciplineServlet extends HttpServlet {
                 response.sendRedirect("success.jsp");
             }
         } else {
-            // Handle other POST requests or provide a default action
+            // 
         }
     }
 }

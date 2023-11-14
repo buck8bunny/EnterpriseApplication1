@@ -57,11 +57,11 @@ public class SaveGradesServlet extends HttpServlet {
                     }
                 }
             }
-            
+
             // Перенаправляем пользователя на страницу с результатами
             response.sendRedirect("GradeEntry.jsp");
         } catch (Exception e) {
-            // Обработка ошибок (вывод на экран или логирование)
+            // Обработка ошибок
             e.printStackTrace();
             response.sendRedirect("Error.jsp");
         }

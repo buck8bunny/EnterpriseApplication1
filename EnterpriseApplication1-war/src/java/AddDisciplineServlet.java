@@ -25,10 +25,10 @@ public class AddDisciplineServlet extends HttpServlet {
             // Call EJB method to create a discipline
             disciplineBean.createDiscipline(discipline);
 
-            // Обновите список дисциплин в запросе
+            // Обновляем список дисциплин в запросе
             List<Discipline> disciplines = disciplineBean.getAllDisciplines();
 
-            // Добавьте список дисциплин в атрибут запроса
+            // Добавляем список дисциплин в атрибут запроса
             request.setAttribute("disciplines", disciplines);
 
             

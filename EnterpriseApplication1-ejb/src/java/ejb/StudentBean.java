@@ -43,7 +43,6 @@ public class StudentBean {
             return null;
         }
     }
-    // Inside StudentBean class
 
     public AcademicGroup getAcademicGroupById(Long academicGroupId) {
         try {

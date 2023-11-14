@@ -49,7 +49,7 @@ public class UpdateStudentServlet extends HttpServlet {
                 }
             } catch (NumberFormatException e) {
                 // Обрабатываем ошибку преобразования ID
-                e.printStackTrace(); // Логгирование или другая обработка ошибки
+                e.printStackTrace();
                 response.sendRedirect("error.jsp");
             }
         } 

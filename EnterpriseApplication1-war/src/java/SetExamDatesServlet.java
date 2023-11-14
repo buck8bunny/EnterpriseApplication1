@@ -1,4 +1,3 @@
-
 import ejb.DisciplineBean;
 import ejb.ExamBean;
 import ejb.Exam;

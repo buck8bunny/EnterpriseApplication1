@@ -50,7 +50,6 @@ public class ViewGroupServlet extends HttpServlet {
                     request.setAttribute("groupDisciplines", groupDisciplines);
 
                     // Перенаправляем на страницу просмотра группы
-                    // Forward to the viewGroup.jsp
                     request.getRequestDispatcher("viewGroup.jsp").forward(request, response);
                 } else {
                     // Обработка ситуации, когда группа не найдена

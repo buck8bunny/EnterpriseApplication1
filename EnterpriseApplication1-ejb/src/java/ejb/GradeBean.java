@@ -25,16 +25,7 @@ public class GradeBean {
             return null;
         }
     }
-//    public void saveGrade(Student student, Exam exam, String gradeValue) {
-//        // Реализация сохранения оценки в базе данных
-//        // Например, создание объекта Grade и его сохранение в EntityManager
-//        Grade grade = new Grade();
-//        grade.setStudent(student);
-//        grade.setExam(exam);
-//        grade.setGrade(gradeValue);
-//
-//        entityManager.persist(grade);
-//    }
+
     
     public void saveGrade(Student student, Exam exam, String gradeValue) {
     // Пытаемся найти существующую оценку для студента и экзамена
@@ -61,7 +52,6 @@ public class GradeBean {
     }
 }
 
-    
     private String getGradeForExam(List<Grade> grades, Exam exam) {
         for (Grade grade : grades) {
             if (grade.getExam().getExamId().equals(exam.getExamId())) {

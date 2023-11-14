@@ -24,7 +24,7 @@ public class AcademicGroupBean {
         try {
             return entityManager.createQuery("SELECT ag FROM AcademicGroup ag", AcademicGroup.class).getResultList();
         } catch (Exception e) {
-            // Обработка ошибки, например, логирование
+            // Обработка ошибки
             e.printStackTrace();
             return null;
         }

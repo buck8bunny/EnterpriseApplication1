@@ -30,7 +30,7 @@ public class DeleteStudentServlet extends HttpServlet {
                 response.sendRedirect("StudentManagement.jsp");
             } catch (NumberFormatException e) {
                 // Обрабатываем ошибку преобразования ID
-                e.printStackTrace(); // Логгирование или другая обработка ошибки
+                e.printStackTrace();
                 response.sendRedirect("error.jsp");
             }
         } else {

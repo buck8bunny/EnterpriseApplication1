@@ -27,7 +27,7 @@ public class AddDisciplineToGroupServlet extends HttpServlet {
         String groupIdString = request.getParameter("groupId");
         String[] disciplineIds = request.getParameterValues("disciplines");
 
-// Проверяем, что disciplineIds не равен null
+        // Проверяем, что disciplineIds не равен null
         if (disciplineIds != null && disciplineIds.length > 0) {
             try {
                 // Преобразуем ID группы в Long
@@ -51,10 +51,10 @@ public class AddDisciplineToGroupServlet extends HttpServlet {
                         academicGroup.setDisciplines(selectedDisciplines);
                         academicGroupBean.updateAcademicGroup(academicGroup);
 
-// После обновления академической группы, получаем ее актуальное состояние
+                        // После обновления академической группы, получаем ее актуальное состояние
                         academicGroup = academicGroupBean.getAcademicGroupById(groupId);
 
-// Получаем список дисциплин из академической группы
+                        // Получаем список дисциплин из академической группы
                         List<Discipline> updatedDisciplines = academicGroup.getDisciplines();
 
                         // Перенаправляем на страницу просмотра группы

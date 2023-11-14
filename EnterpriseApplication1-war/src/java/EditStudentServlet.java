@@ -1,3 +1,4 @@
+
 import ejb.Student;
 import ejb.StudentBean;
 import ejb.AcademicGroup;
@@ -26,7 +27,7 @@ public class EditStudentServlet extends HttpServlet {
         if (studentIdString != null && !studentIdString.isEmpty()) {
             try {
                 // Преобразуем ID в Long
-                
+
                 Long studentId = Long.parseLong(studentIdString);
 
                 // Получаем студента по ID с использованием EJB
@@ -34,12 +35,10 @@ public class EditStudentServlet extends HttpServlet {
 
                 // Получаем список всех академических групп и дисциплин для формы редактирования
                 List<AcademicGroup> academicGroups = studentBean.getAllAcademicGroups();
-                
 
                 // Устанавливаем атрибуты в запрос для передачи данных в JSP
                 request.setAttribute("student", student);
                 request.setAttribute("academicGroups", academicGroups);
-               
 
                 // Перенаправляем на страницу редактирования
                 request.getRequestDispatcher("editStudent.jsp").forward(request, response);
@@ -55,5 +54,3 @@ public class EditStudentServlet extends HttpServlet {
         }
     }
 }
-
-
